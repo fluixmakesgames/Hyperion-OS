@@ -1,6 +1,7 @@
 #include "./include/print.h"
 #include "src/port.h"
 #include "src/gdt.h"
+#include "src/idt.h"
 
 
 
@@ -20,5 +21,8 @@ void kernel_main() {
    	clear_screen();
    	print_msg("Initing GDT\n");
 	gdtinit();
+	print_msg("Initing IDT\n");
+	idtinit();
+	const char msg[] = "hello, syscall!\n";
 	print_msg("Goodbye, world!\n");
 }
