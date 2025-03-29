@@ -1,2 +1,0 @@
-# Hyperion-OS
-Small OS
