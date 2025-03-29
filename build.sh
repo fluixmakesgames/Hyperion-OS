@@ -8,4 +8,9 @@ qemu-system-x86_64 -kernel ./bin/kernel.bin
 # Cleaning
 rm ./kernel.o
 rm ./boot.o
-rm ./bin/kernel.bin
+
+read -p "Delete kernel? [Y/n]: " delkernel
+
+if [ "$delkernel" = "y" ] || [ "$delkernel" = "Y" ]; then
+    rm ./bin/kernel.bin
+fi
